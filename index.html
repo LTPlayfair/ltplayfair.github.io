@@ -5,96 +5,206 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LTPlayfair — Official Artist Page</title>
   <meta name="description" content="LTPlayfair — Brutalist figuration • experimental sketches • 1/1 digital works. Links, selected works, and NFT showcases.">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:title" content="LTPlayfair — Official Artist Page">
+  <meta property="og:description" content="Brutalist figuration • experimental sketches • 1/1 digital works. Links, selected works, and NFT showcases.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ltplayfair.github.io/">
+  <!-- Use a small logo or banner here; you can swap later -->
+  <meta property="og:image" content="https://ltplayfair.github.io/PlayFairLogo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LTPlayfair — Official Artist Page">
+  <meta name="twitter:description" content="Brutalist figuration • experimental sketches • 1/1 digital works.">
+  <meta name="twitter:image" content="https://ltplayfair.github.io/PlayFairLogo.jpg">
+
   <link rel="icon" href="data:,">
+
   <style>
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#eaeaea;background:#0b0b0c}
-    .wrap{max-width:880px;margin:0 auto;padding:28px}
+    :root{
+      --bg:#0b0b0c; --card:#121214; --fg:#eaeaea; --muted:#9aa0a6; --border:#232327;
+    }
+    html,body{height:100%}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);background:var(--bg)}
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+
+    /* cards & text */
     h1{margin:0;font-size:34px}
-    .muted{color:#9aa0a6}
-    .card{background:#121214;border:1px solid #232327;border-radius:16px;padding:16px 18px;margin:16px 0}
-    .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
-    a.link{display:block;padding:12px 14px;border:1px solid #2a2a30;border-radius:12px;background:#17171a;color:#eaeaea;text-decoration:none}
+    h2{margin:0 0 8px 0;font-size:18px}
+    .muted{color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 18px;margin:16px 0}
+
+    /* header row */
+    header.site{
+      display:flex;align-items:center;gap:12px;margin-bottom:20px;
+    }
+    header.site img.logo{height:60px;border-radius:8px}
+
+    /* links grid */
+    .links{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px
+    }
+    a.link{
+      display:block;padding:12px 14px;border:1px solid var(--border);
+      border-radius:12px;background:#17171a;color:var(--fg);text-decoration:none
+    }
     a.link:hover{border-color:#3a3a44}
-    img{max-width:100%;border-radius:12px;margin-bottom:20px}
+
+    /* image grids (uniform thumbs) */
+    .thumbs{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px
+    }
+    .thumb{
+      border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#0e0e10
+    }
+    .thumb img{
+      width:100%;height:220px;object-fit:cover;display:block
+    }
+    .thumb .cap{padding:8px 10px;font-size:14px;color:var(--muted)}
+    /* banners constrained */
+    .banner{width:100%;max-height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+    footer{margin-top:12px}
   </style>
+
+  <!-- Schema.org (machine-readable) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"LTPlayfair",
+    "url":"https://ltplayfair.github.io/",
+    "email":"mailto:ltplayfair@shaw.ca",
+    "homeLocation":"Vancouver, Canada",
+    "knowsAbout":["Brutalist figuration","digital art","NFT"],
+    "sameAs":[
+      "https://linktr.ee/LTPlayfair",
+      "https://x.com/LTPlayfair",
+      "https://opensea.io/collection/the-hatchet-people-collection",
+      "https://opensea.io/0x91082f1ebe5afb6666b3ff787e3f2a62df619f11/galleries",
+      "https://og.rarible.com/ltplayfairraw/items"
+    ]
+  }
+  </script>
+
+  <!-- Simple public JSON block other tools can read if they fetch this page and parse it -->
+  <script type="application/json" id="ltp-public">
+  {
+    "artist":"LTPlayfair",
+    "contact":"ltplayfair@shaw.ca",
+    "links":{
+      "linktree":"https://linktr.ee/LTPlayfair",
+      "opensea_brutalist_figuration":"https://opensea.io/collection/the-hatchet-people-collection",
+      "opensea_galleries":"https://opensea.io/0x91082f1ebe5afb6666b3ff787e3f2a62df619f11/galleries",
+      "rarible_raw_power_sketches":"https://og.rarible.com/ltplayfairraw/items",
+      "x_twitter":"https://x.com/LTPlayfair"
+    },
+    "selected_works":[
+      {"title":"Bishop Arcade 2019","image":"Bishop Arcade 2019.png"},
+      {"title":"Female Predator 2019","image":"Female Predator 2019.png"},
+      {"title":"Giga Karen 2020","image":"Giga Karen 2020.png"}
+    ],
+    "billboards":[
+      {"title":"Stanley Park Crow — Times Square","image":"Stanley-Park-Crow-Times-Square-Billboard.jpg"},
+      {"title":"Waterfront Station — Times Square","image":"Waterfront-Station-Times-Square-Billboard.jpg"}
+    ],
+    "assets":{
+      "logo_small":"PlayFairLogo.jpg",
+      "logo_standard":"LTPlayfair_official_reduced.jpg",
+      "banner_top":"Top-Banner-YouTube-Channel-Reduced.jpg"
+    }
+  }
+  </script>
 </head>
 <body>
   <div class="wrap">
 
-    <!-- Logo + Title -->
-    <header style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-      <img src="PlayFairLogo.jpg" alt="LTPlayfair logo" style="height:60px;border-radius:8px;">
+    <!-- Header -->
+    <header class="site">
+      <img class="logo" src="PlayFairLogo.jpg" alt="LTPlayfair logo">
       <div>
         <h1>LTPlayfair</h1>
-        <div class="muted">Brutalist figuration • Experimental sketches • 1/1 digital works</div>
+        <div class="muted">Brutalist figuration • experimental sketches • 1/1 digital works</div>
       </div>
     </header>
 
-    <!-- Links -->
-    <div class="card">
+    <!-- Links (ORDER you asked for: Linktree, OpenSea BF, OpenSea Galleries, Rarible, X, Email) -->
+    <section class="card">
       <h2>Links</h2>
       <div class="links">
-        <!-- OpenSea Brutalist Figuration -->
-        <a class="link" href="https://opensea.io/collection/the-hatchet-people-collection" target="_blank">
+        <a class="link" href="https://linktr.ee/LTPlayfair" target="_blank" rel="noopener">Linktree — all links</a>
+
+        <a class="link" href="https://opensea.io/collection/the-hatchet-people-collection" target="_blank" rel="noopener">
           OpenSea — Brutalist Figuration
         </a>
 
-        <!-- OpenSea Galleries -->
-        <a class="link" href="https://opensea.io/0x91082f1ebe5afb6666b3ff787e3f2a62df619f11/galleries" target="_blank">
+        <a class="link" href="https://opensea.io/0x91082f1ebe5afb6666b3ff787e3f2a62df619f11/galleries" target="_blank" rel="noopener">
           OpenSea — Galleries
         </a>
 
-        <!-- Rarible Raw Power Sketches -->
-        <a class="link" href="https://og.rarible.com/ltplayfairraw/items" target="_blank">
+        <a class="link" href="https://og.rarible.com/ltplayfairraw/items" target="_blank" rel="noopener">
           Rarible — Raw Power Sketches
         </a>
 
-        <!-- Linktree -->
-        <a class="link" href="https://linktr.ee/LTPlayfair" target="_blank">Linktree — all links</a>
+        <a class="link" href="https://x.com/LTPlayfair" target="_blank" rel="noopener">
+          X (Twitter) — @LTPlayfair
+        </a>
 
-        <!-- Social -->
-        <a class="link" href="https://x.com/LTPlayfair" target="_blank">X (Twitter) — @LTPlayfair</a>
-
-        <!-- Artist contact -->
-        <a class="link" href="mailto:ltplayfair@shaw.ca">Email — artist contact</a>
+        <a class="link" href="mailto:ltplayfair@shaw.ca">
+          Email — artist contact
+        </a>
       </div>
-    </div>
+    </section>
 
-    <!-- Selected Works -->
-    <div class="card">
+    <!-- Selected Works: uniform thumbs in a grid -->
+    <section class="card">
       <h2>Selected Works</h2>
-      <p><strong>1st:</strong> Bishop Arcade 2019</p>
-      <img src="Bishop Arcade 2019.png" alt="Bishop Arcade 2019 artwork">
+      <div class="thumbs">
+        <div class="thumb">
+          <img src="Bishop Arcade 2019.png" alt="Bishop Arcade 2019">
+          <div class="cap">Bishop Arcade 2019</div>
+        </div>
+        <div class="thumb">
+          <img src="Female Predator 2019.png" alt="Female Predator 2019">
+          <div class="cap">Female Predator 2019</div>
+        </div>
+        <div class="thumb">
+          <img src="Giga Karen 2020.png" alt="Giga Karen 2020">
+          <div class="cap">Giga Karen 2020</div>
+        </div>
+      </div>
+    </section>
 
-      <p><strong>2nd:</strong> Female Predator 2019</p>
-      <img src="Female Predator 2019.png" alt="Female Predator 2019 artwork">
+    <!-- Logos & Banner: sized sensibly (press-kit style) -->
+    <section class="card">
+      <h2>Logo & Banner</h2>
+      <div class="thumbs">
+        <div class="thumb">
+          <img src="LTPlayfair_official_reduced.jpg" alt="LTPlayfair standard logo">
+          <div class="cap">Standard Logo</div>
+        </div>
+        <div class="thumb">
+          <img src="PlayFairLogo.jpg" alt="LTPlayfair small logo">
+          <div class="cap">Small Logo</div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px">Top banner (constrained):</p>
+      <img class="banner" src="Top-Banner-YouTube-Channel-Reduced.jpg" alt="Top banner">
+    </section>
 
-      <p><strong>3rd:</strong> Giga Karen 2020</p>
-      <img src="Giga Karen 2020.png" alt="Giga Karen 2020 artwork">
-    </div>
-
-    <!-- Logos and banners -->
-    <div class="card">
-      <h2>Logos & Banners</h2>
-      <p>Standard Logo:</p>
-      <img src="LTPlayfair_official_reduced.jpg" alt="LTPlayfair official logo">
-
-      <p>Small Logo:</p>
-      <img src="PlayFairLogo.jpg" alt="Small LTPlayfair logo">
-
-      <p>Top Banner:</p>
-      <img src="Top-Banner-YouTube-Channel-Reduced.jpg" alt="Top banner">
-    </div>
-
-    <!-- NFT.NYC images -->
-    <div class="card">
+    <!-- NFT.NYC Billboards: uniform thumbs -->
+    <section class="card">
       <h2>NFT.NYC Billboards</h2>
-      <p>Stanley Park Crow — Times Square Billboard</p>
-      <img src="Stanley-Park-Crow-Times-Square-Billboard.jpg" alt="NFT.NYC Stanley Park Crow Billboard">
-
-      <p>Waterfront Station — Times Square Billboard</p>
-      <img src="Waterfront-Station-Times-Square-Billboard.jpg" alt="NFT.NYC Waterfront Station Billboard">
-    </div>
+      <div class="thumbs">
+        <div class="thumb">
+          <img src="Stanley-Park-Crow-Times-Square-Billboard.jpg" alt="Stanley Park Crow — Times Square Billboard">
+          <div class="cap">Stanley Park Crow — Times Square</div>
+        </div>
+        <div class="thumb">
+          <img src="Waterfront-Station-Times-Square-Billboard.jpg" alt="Waterfront Station — Times Square Billboard">
+          <div class="cap">Waterfront Station — Times Square</div>
+        </div>
+      </div>
+    </section>
 
     <footer class="muted">© <span id="y"></span> LTPlayfair</footer>
   </div>
