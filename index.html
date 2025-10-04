@@ -1,12 +1,132 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>LTPlayfair</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LTPlayfair — Official Artist Site</title>
+  <meta name="description" content="LTPlayfair — Brutalist figuration & experimental sketches. Official artist site for links, drops, and contact." />
+  <meta property="og:title" content="LTPlayfair — Official Artist Site" />
+  <meta property="og:description" content="Brutalist figuration & experimental sketches. Official artist site for links, drops, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ltplayfair.github.io/" />
+  <meta property="og:image" content="https://ltplayfair.github.io/cover.jpg" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root { --bg: #0b0b0c; --card:#121214; --fg:#eaeaea; --muted:#9aa0a6; --accent:#8be9fd; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--fg); background:radial-gradient(1200px 800px at 70% -10%, #1c1c20 0%, var(--bg) 60%);} 
+    .wrap{max-width:980px;margin:0 auto;padding:32px}
+    header{display:flex;gap:20px;align-items:center;margin:28px 0 12px}
+    .avatar{width:96px;height:96px;border-radius:16px;background:#222;object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    h1{font-size:34px;margin:0 0 6px 0;letter-spacing:.3px}
+    .tag{display:inline-block;padding:2px 8px;border:1px solid #303038;border-radius:999px;color:var(--muted);font-size:12px}
+    .card{background:var(--card);border:1px solid #232327;border-radius:18px;padding:20px 20px 8px;margin:18px 0;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:8px 0 4px}
+    .link{padding:14px 16px;border:1px solid #2a2a30;border-radius:14px;background:linear-gradient(180deg,#17171a, #121214);text-decoration:none;color:var(--fg);display:flex;justify-content:space-between;align-items:center}
+    .link span{opacity:.95}
+    .link small{color:var(--muted)}
+    .link:hover{border-color:#3a3a44;transform:translateY(-1px)}
+    h2{font-size:18px;margin:8px 0}
+    .muted{color:var(--muted)}
+    footer{margin:22px 0 8px;color:var(--muted);font-size:13px}
+    code{background:#1b1b1f;border:1px solid #2a2a30;border-radius:6px;padding:2px 6px}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media (min-width: 820px){ .grid{grid-template-columns:1fr 1fr} }
+    .thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+    .thumbs a{display:block;border-radius:12px;overflow:hidden;border:1px solid #2a2a30}
+    .thumbs img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;border:1px solid #2a2a30;color:var(--muted)}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "LTPlayfair",
+    "url": "https://ltplayfair.github.io/",
+    "jobTitle": "Artist",
+    "homeLocation": "Vancouver, Canada",
+    "knowsAbout": ["Brutalist figuration","digital art","NFT"],
+    "sameAs": [
+      "https://opensea.io/collection/the-hatchet-people-collection",
+      "https://rarible.com/ltplayfairbaseai/items",
+      "https://x.com/LTPlayfair",
+      "https://linktr.ee/LTPlayfair"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <h1>LTPlayfair</h1>
-  <p>Brutalist figuration • Experimental sketches • 1/1 digital works</p>
-  <p><a href="https://linktr.ee/LTPlayfair">My Linktree</a></p>
+  <div class="wrap">
+    <header>
+      <img class="avatar" src="cover.jpg" alt="LTPlayfair cover" />
+      <div>
+        <h1>LTPlayfair</h1>
+        <div class="muted">Brutalist figuration • Experimental sketches • 1/1 digital works</div>
+        <div class="tag">Vancouver • on‑chain art</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Links</h2>
+      <div class="links">
+        <a class="link" href="https://linktr.ee/LTPlayfair" target="_blank" rel="noopener">
+          <span>Linktree</span><small>all links</small>
+        </a>
+        <a class="link" href="https://opensea.io/collection/the-hatchet-people-collection" target="_blank" rel="noopener">
+          <span>OpenSea</span><small>Brutalist Figuration</small>
+        </a>
+        <a class="link" href="https://rarible.com/ltplayfairbaseai/items" target="_blank" rel="noopener">
+          <span>Rarible</span><small>AI Reconfigured ✓ Verified</small>
+        </a>
+        <a class="link" href="https://x.com/LTPlayfair" target="_blank" rel="noopener">
+          <span>X (Twitter)</span><small>@LTPlayfair</small>
+        </a>
+        <a class="link" href="mailto:your.public.email@example.com">
+          <span>Email</span><small>contact</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="card grid">
+      <div>
+        <h2>About</h2>
+        <p>Artist profile for API forms & collectors. Minimal, fast, one page. No personal identifiers beyond the public LTPlayfair brand.</p>
+        <p class="muted">This page gives you a legit website URL for OpenSea API applications and Zapier integrations.</p>
+      </div>
+      <div>
+        <h2>Latest / Status</h2>
+        <p>Optionally expose a simple JSON feed for automations. Create <code>/status.json</code> in this repo:</p>
+<pre><code>{
+  "artist":"LTPlayfair",
+  "latest_drop_url":"https://opensea.io/collection/the-hatchet-people-collection",
+  "message":"gm — collector pricing applies."
+}
+</code></pre>
+        <p class="muted">Zapier or GitHub Actions can fetch this and post updates.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Selected Works</h2>
+      <div class="thumbs">
+        <a href="https://opensea.io/collection/the-hatchet-people-collection" target="_blank" rel="noopener">
+          <img src="media/sample-1.jpg" alt="Sample artwork 1" />
+        </a>
+        <a href="https://rarible.com/ltplayfairbaseai/items" target="_blank" rel="noopener">
+          <img src="media/sample-2.jpg" alt="Sample artwork 2" />
+        </a>
+        <a href="https://opensea.io/collection/ltplayfair-1" target="_blank" rel="noopener">
+          <img src="media/sample-3.jpg" alt="Sample artwork 3" />
+        </a>
+      </div>
+      <p class="muted">Replace the three <code>media/sample-*.jpg</code> files with your images (keep them under ~400KB for speed).</p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> LTPlayfair • <span class="pill">Static • Privacy‑friendly • GitHub Pages</span>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
