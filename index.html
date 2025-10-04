@@ -34,25 +34,29 @@
     .muted{color:var(--muted)}
     .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 18px;margin:16px 0}
 
-    /* header row */
+    /* hero banner (no crop; full width) */
+    .hero{
+      width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--border);margin-bottom:16px
+    }
+
+    /* header row under banner */
     header.site{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
-    header.site img.logo{height:72px;border-radius:8px} /* crisp standard logo */
+    header.site img.logo{max-height:72px;width:auto;border-radius:8px} /* use standard logo for crispness */
 
     /* links grid */
     .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
     a.link{display:block;padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:#17171a;color:var(--fg);text-decoration:none}
     a.link:hover{border-color:#3a3a44}
 
-    /* image grids (uniform thumbs) */
+    /* image grids (uniform thumbs for artworks) */
     .thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
     .thumb{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#0e0e10}
     .thumb img{width:100%;height:220px;object-fit:cover;display:block}
     .thumb .cap{padding:8px 10px;font-size:14px;color:var(--muted)}
     .thumb a{display:block;text-decoration:none;color:inherit}
 
-    /* banner constrained */
-    .banner{width:100%;max-height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
-    footer{margin-top:12px}
+    footer{margin-top:12px;display:flex;align-items:center;gap:10px;color:var(--muted)}
+    footer img.smalllogo{height:26px;width:auto;display:inline-block} /* show native size to avoid pixelation */
   </style>
 
   <!-- Schema.org (machine-readable) -->
@@ -115,7 +119,10 @@
 <body>
   <div class="wrap">
 
-    <!-- Header -->
+    <!-- HERO BANNER (top of page, full width, no crop) -->
+    <img class="hero" src="Top-Banner-YouTube-Channel-Reduced.jpg" alt="LTPlayfair top banner">
+
+    <!-- Header under banner -->
     <header class="site">
       <img class="logo" src="LTPlayfair_official_reduced.jpg" alt="LTPlayfair logo">
       <div>
@@ -124,7 +131,7 @@
       </div>
     </header>
 
-    <!-- About (visible text with your voice) -->
+    <!-- About -->
     <section class="card">
       <h2>About</h2>
       <p>CANADIAN Artist in figuration, abstraction, social commentary w/ intensity, rawness, cultural voice.</p>
@@ -190,23 +197,6 @@
       </div>
     </section>
 
-    <!-- Logo & Banner (press-kit style) -->
-    <section class="card">
-      <h2>Logo & Banner</h2>
-      <div class="thumbs">
-        <div class="thumb">
-          <img src="LTPlayfair_official_reduced.jpg" alt="LTPlayfair standard logo">
-          <div class="cap">Standard Logo</div>
-        </div>
-        <div class="thumb">
-          <img src="PlayFairLogo.jpg" alt="LTPlayfair small logo" style="height:120px;width:auto;margin:0 auto;display:block;">
-          <div class="cap">Small Logo (kept at native-ish size to avoid pixelation)</div>
-        </div>
-      </div>
-      <p class="muted" style="margin-top:8px">Top banner (constrained):</p>
-      <img class="banner" src="Top-Banner-YouTube-Channel-Reduced.jpg" alt="Top banner">
-    </section>
-
     <!-- NFT.NYC Billboards -->
     <section class="card">
       <h2>NFT.NYC Billboards</h2>
@@ -222,7 +212,10 @@
       </div>
     </section>
 
-    <footer class="muted">© <span id="y"></span> LTPlayfair</footer>
+    <footer class="muted">
+      <img class="smalllogo" src="PlayFairLogo.jpg" alt="LTPlayfair small logo">
+      © <span id="y"></span> LTPlayfair
+    </footer>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
